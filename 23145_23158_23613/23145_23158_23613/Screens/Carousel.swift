@@ -5,7 +5,7 @@ struct Carousel: View {
     @State private var isLoading = true
     @State private var error: Error?
 
-    // Pega os exercícios
+    // Pega os exercícios e os atribuem à variável exercises
     func loadExercises() {
         Task {
             do {
@@ -23,21 +23,22 @@ struct Carousel: View {
     var body: some View {
         NavigationView {
             VStack {
+                // Se ainda está carregando os cards, exibe uma barra de progresso
                 if isLoading {
                     ProgressView("Carregando Exercícios...")
                         .progressViewStyle(CircularProgressViewStyle())
                         .padding()
                 }
                 
+                // Exibe uma mensagem de erro se o erro não for nulo
                 else if let error = error {
-                    // Exibe uma mensagem de erro se o erro não for nulo
                     Text("Erro ao carregar dados: \(error.localizedDescription)")
                         .foregroundColor(.red)
                         .padding()
                 }
                 
+                // Se os dados forem carregados com sucesso, exibe o carrossel de exercícios
                 else {
-                    // Se os dados forem carregados com sucesso, exibe o carrossel de exercícios
                     TabView {
                         ForEach(exercises) { exercise in
                             ExerciseCards(exercise: exercise)

@@ -12,11 +12,13 @@ struct ExerciseCards: View {
                     .frame(width: 300, height: 200)
                     .cornerRadius(10)
             }
+            // Enquanto a imagem não está carregada, exibe uma barra de progresso
             placeholder: {
                 ProgressView()
                     .frame(width: 300, height: 200)
             }
             
+            // Exibe a identificação do objeto Exercise
             Text("Exercício \(exercise.exercise_id)º")
                 .bold()
                 .foregroundColor(Color(red: 0.8, green: 0.5, blue: 0.1))

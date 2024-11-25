@@ -9,9 +9,9 @@ struct InsertExercise: View {
     @State private var isImagePickerPresented: Bool = false
     @State private var name: String = ""
     @State private var video: String = ""
-    @State private var errorMessage: String? = nil // Para armazenar mensagem de erro
+    @State private var errorMessage: String? = nil
     
-    // Carregar os dados da API
+    // Carregar os músculos da API
     func loadMuscles() {
         Task {
             do {
@@ -130,11 +130,14 @@ struct InsertExercise: View {
     
     var body: some View {
         VStack {
+            // Se os músculos não estão em exibição, exibe uma barra de progresso
             if isLoading {
                 ProgressView("Carregando músculos...")
                     .progressViewStyle(CircularProgressViewStyle())
                     .padding()
             }
+            
+            // Exibe os músculos em um ComboBox
             else {
                 Picker("Escolha um músculo", selection: $selectedMuscle) {
                     ForEach(muscles) { muscle in
@@ -147,14 +150,17 @@ struct InsertExercise: View {
                 .padding(.horizontal)
                 .padding()
                 
+                // Campo para inserir o nome do exercício
                 TextField("Digite o nome do exercício", text: $name)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 
+                // Campo para inserir a URL do exercício
                 TextField("Digite a URL do exercício", text: $video)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 
+                // Botão para adicionar imagens
                 Button(action: {
                     isImagePickerPresented.toggle()
                 }) {

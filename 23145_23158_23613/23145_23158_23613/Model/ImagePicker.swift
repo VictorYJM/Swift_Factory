@@ -1,6 +1,7 @@
 import SwiftUI
 import UIKit
 
+// Struct para exibir um pegador de imagens vinculado ao aplicativo FOTOS do celular / ipad
 struct ImagePicker: UIViewControllerRepresentable {
     @Binding var selectedImage: UIImage?
     @Binding var isImagePickerPresented: Bool

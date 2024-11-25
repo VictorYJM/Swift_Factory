@@ -12,23 +12,28 @@ struct DetailedCard: View {
                     .frame(width: 300, height: 200)
                     .cornerRadius(10)
             }
+            // Enquanto a imagem não está carregada, exibe uma barra de progresso
             placeholder: {
                 ProgressView()
                     .frame(width: 300, height: 200)
             }
             
+            // Exibe o identificador do objeto Exercise
             Text("Exercício \(exercise.exercise_id)º")
                 .bold()
                 .foregroundColor(Color(red: 0.8, green: 0.5, blue: 0.1))
             
+            // Exibe o nome do objeto Exercise
             Text(exercise.exercise_name)
                 .font(.headline)
                 .padding(.bottom, 8)
             
+            // Exibe o nome do músculo do objeto Exercise
             Text("Músculo: \(exercise.exercise_muscle.muscle_name)")
                 .font(.subheadline)
                 .foregroundColor(.gray)
-            
+
+            // Exibe o caminho do vídeo do objeto Exercise
             Text("\(exercise.exercise_path)")
                 .font(.subheadline)
                 .foregroundColor(.blue)
