@@ -4,15 +4,8 @@
 **Shape Factory** é o aplicativo definitivo para quem busca atingir o auge corporal, oferecendo uma experiência personalizada que combina **treino**, **nutrição** e **motivação**. Seja para alcançar novos patamares de performance ou transformar completamente seu corpo, o Shape Factory é o parceiro que você precisa para fazer isso de forma inteligente e eficaz.
 
 ## Funcionalidades
-* Cadastro de usuários
-* Planos de treinos personalizados
-* Gestão de exercícios
-* Armazenamento dos vídeos de treinos
-* Armazenamento de guias detalhados de cada exercício
-* Rastreamento de desempenho
-* Gráfico de progresso
-* Armazenamento de receitas
-* Insights personalizados
+* Exibição de exercícios
+* Cadastro de exercícios
 
 ___________________________________________________________________________________________________________
 
@@ -113,33 +106,12 @@ ________________________________________________________________________________
 ___________________________________________________________________________________________________________
 
 ### Front-End (Disponível em: https://github.com/VictorYJM/Shape_Factory)
-* Implementado em Flutter na linguagem Dart
+* Implementado em Swift
 
-|**Tela de Clientes**|**Funcionalidades**|
+|**Telas**|**Funcionalidades**|
 |----------------|-----------------|
-| **Login** | Apresenta campos para o usuário inserir suas credenciais de acesso (email e senha) para entrar no aplicativo caso a verificação seja bem sucedida, caso contrário, retorna uma mensagem de credenciais incorretas |
-| **Cadastro** | Apresenta campos para o usuário inserir seus dados pessoais (nome, email, data de nascimento, peso, gênero e senha) tentando assim, criar um login de acesso para o usuário baseado nos dados apresentados |
-| **CentralPage** | Cria uma barra de navegação que oferece acesso à três diferentes telas, tela principal, tela de relatórios e tela da conta do usuário |
-| **Home** | Apresenta os treinos padrões e personalizados do usuário |
-| **Relatório** | Apresenta um gráfico de desempenho sobre quais músculos foram mais trabalhados, quantos dias treinados e um calendário com cada dia treinado pelo usuário abre uma página de histórico com os exercícios daquele dia |
-| **Conta** | Apresenta os dados do cliente (nome, email, senha e peso), permitindo a atualização do peso e da senha, além de proporcionar o recurso de "deslogar" |
-| **ActiveTrainingBar** | Apresenta uma barra de relatório do tempo gasto pelo usuário para executar todos os exercícios de um treino, o usuário não poderá iniciar outro treino antes de finalizar o que já está ativo |
-| **EditTraining** | Apresenta todos os exercícios de um treino selecionado e permite a alteração de dados (peso, repetições e séries), adição e remoção de exercícios do treino |
-| **Objetivo** | Apresenta objetivos para o usuário selecionar após o cadastro, perder peso, ganhar massa, ganhar flexibilidade ou força |
-| **SelectExercises** | Tela de navegação dos exercícios, apresentando opções de filtragem por nome do exercício e músculo alvo, retornando a página de EditTraining os exercícios selecionados na ordem de seleção |
-| **StartTraining** | Apresenta os dados de cada exercício presente no treino ativo e permite a atualização dos dados de cada um (peso, repetições e séries) |
-| **ViewHistory** | Apresenta todos os exercícios treinados num determinado dia, tal dia é determinado pela seleção no calendário da tela de Relatório |
-
-<br>
-
-|**Tela de Administradores**|**Funcionalidades**|
-|--------------|----------|
-| **Login** | Apresenta campos para o usuário inserir suas credenciais de acesso (email e senha) para entrar no aplicativo caso a verificação seja bem sucedida, caso contrário, retorna uma mensagem de credenciais incorretas |
-| **CentralPage** | Cria uma barra de navegação que oferece acesso à duas páginas, adicionar exercício e editar treino |
-| **AddExercise** | Apresenta todos os exercícios do projeto e permite a adição de novos exercícios |
-| **EditTraining** | Apresenta uma tela com o nome do treino (alterável) e permite adicionar e excluir exercícios, os dados de peso, repetições e séries estão incluídos como alteráveis |
-| **SelectExercises** | Tela de navegação dos exercícios, apresentando opções de filtragem por nome do exercício e músculo alvo, retornando a página de EditTraining os exercícios selecionados na ordem de seleção |
-| **SelectTraining** | Apresenta os treinos separados pela sua categoria (superior, inferior ou full-body) e permite adicionar, editar e excluir treinos existentes |
+| **Carousel** | Apresenta cards com as informações dos exercícios presentes no banco de dados |
+| **Cadastro** | Apresenta campos para a inserção de um novo exercício ao banco de dados |
 
 ___________________________________________________________________________________________________________
 
@@ -147,4 +119,4 @@ ________________________________________________________________________________
 * Banco de Dados (PostgreSQL)
 * Firebase (SupaBase)
 * Back-End (Java Spring Boot)
-* Front-end (Flutter)
+* Front-end (Swift)
