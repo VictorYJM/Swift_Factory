@@ -1,8 +1,8 @@
 import SwiftUI
 
 struct InsertExercise: View {
-    @State private var selectedMuscle: Muscle? = nil
     @State private var muscles: [Muscle] = []
+    @State private var selectedMuscle: Muscle? = nil
     @State private var selectedImage: UIImage? = nil
     @State private var isLoading: Bool = true
     @State private var isSubmitting: Bool = false
@@ -16,6 +16,7 @@ struct InsertExercise: View {
         Task {
             do {
                 muscles = try await fetchMuscles()
+                selectedMuscle = self.muscles[0]
                 isLoading = false
             } catch {
                 print("Erro ao carregar músculos: \(error)")
